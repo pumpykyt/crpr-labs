@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRPR.Client.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            BackgroundColor="Aquamarine"
+            VerticalOptions="Center">
+
+            <CollectionView x:Name="collectionView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout BackgroundColor="LightCoral" Margin="30">
+                            <Image Margin="5" Source="{Binding ImageUrl}" Aspect="AspectFit" HeightRequest="100" WidthRequest="100"/>
+                            <Label Margin="5" TextColor="Black" Text="{Binding Title}"/>
+                            <Label Margin="5" TextColor="Black" Text="{Binding AuthorName}" FontAttributes="Italic" />
+                            <Label Margin="5" TextColor="Black" Text="{Binding Description}" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
